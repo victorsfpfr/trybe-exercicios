@@ -1,0 +1,29 @@
+ol li {
+    background-color: yellow;
+}
+ol li:nth-of-type(even){
+    color: green;
+}
+ol li:nth-of-type(odd){
+    text-transform: uppercase;
+}
+h1, h2, h3 {
+    color: red;
+}
+
+h1 em, h2 em, h3 em{
+    width: 40px; border: solid black;
+}
+li {
+    font-size: 20px;
+}
+li em{
+    font-weight: bold;
+}
+#linguagens li:nth-child(-n+3) {
+    color: blue;
+  }
+  
+  #linguagens li a[href*="Java"] {  //Nao queria selecionar manualmente a lista com Java, mas nao consegui :/ //
+    background-color: pink;
+  } 
