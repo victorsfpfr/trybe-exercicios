@@ -49,10 +49,27 @@ console.log("A jogadora possui " + player2.medals.golden + " medalhas de ouro e 
 /* No exemplo acima, utilizamos o for/of para percorrer o iterável e retornar o valor dos elementos.
 Agora que você já sabe a diferença entre eles e como usá-los, chegou o momento de praticar.
  */
-/* Com base no objeto a seguir, utilize for/in e imprima no console a mensagem 'Olá, xxxxx' para cada nome, substituindo o xxxxx pelo nome em questão. */
-let names = {
-    person1: 'João',
-    person2: 'Maria',
+/* Com base no objeto a seguir, utilize for
+  let student = {
+
+  }
+
+  let newStudentInfo = {
+  nome: "Estudante",
+  eMail: "emailestudante@betrybe.com.br",
+  telefone: 123456789,
+  GitHub: "estudanteNovo/github.com",
+  LinkedIn:  "novoestudante/linkedin.com.br",
+}
+ 
+ function addProperty (object, key, value) {
+    object[key] = value;
+  };
+
+  
+  addProperty(student, newStudentInfo, allinfo);
+  console.log(student);
+  
     person3: 'Jorge',
   };
 for (let pessoas in names) {
@@ -74,7 +91,7 @@ let car = {
   /* Após ter conhecido diferentes maneiras de associar chaves e valores a um objeto, que tal praticar? 
   Adicione suas informações ao objeto student = {}, como nome, e-mail, telefone, GitHub e LinkedIn, usando os métodos abordados no conteúdo.
  */
-
+/* 
   let student = {
 
   }
@@ -94,5 +111,77 @@ let car = {
   
   addProperty(student, newStudentInfo, allinfo);
   console.log(student);
+   */
+  
+
+
+
+
+
+
   
   
+  //EXERCICIOS DO DIA
+  /* Com base neste objeto, faça os exercícios a seguir. */
+
+
+ /*  1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo o nome dela. Para isso, utilize a sintaxe meuObjeto.chave. 
+  Então, o valor esperado no console é:
+ */
+
+ /*  console.log("Bem Vindo(a) " + info.personagem + "!"); */
+
+/*   2 - Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, imprima o objeto no console. 
+  Para isso, use a sintaxe meuObjeto['chave'] = valor. Então, o valor esperado no console é:
+ */
+
+    
+/*   info.recorrente = 'sim';  */
+  
+ /*  console.log(info); */
+
+ /*  3 - Faça um for/in que mostre todas as chaves do objeto. O valor esperado no console é: */
+
+ let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+    recorrente: 'sim', 
+ };
+
+ 
+ for (let infoKeys in info) {
+    console.log(infoKeys);
+ } 
+
+
+ /* 4 - Faça um novo for/in, mas agora mostre todos os valores das propriedades do objeto. O valor esperado no console é: */
+
+for (let key in info) {
+    console.log(info[key]);
+}
+
+/* 5 - Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: “Tio Patinhas”, 
+“Christmas on Bear Mountain, Dell’s Four Color Comics #178”, “O último MacPatinhas”, “Sim”. Então, imprima os valores de cada objeto juntos, 
+de acordo com cada uma das chaves. O valor esperado no console é:
+*/
+
+let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'sim',
+}
+
+for (let key in info) {
+    if (
+        key === 'recorrente' &&
+        info[key] === 'sim' &&
+        info2[key] === 'sim'
+    )  {console.log('Ambos recorrentes');
+} else {
+    console.log(info[key] + ' e ' + info2[key]);
+}     
+}
+
+
