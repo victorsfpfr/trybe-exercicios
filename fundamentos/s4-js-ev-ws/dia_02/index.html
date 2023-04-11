@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+
+<main id="parent-of-parent">
+  <section id="parent">
+    <section id="first-child"></section>
+    <section id="where-are-you">
+      <section id="first-child-of-child"></section>
+    </section>
+    Attention!
+    <section id="third-child"></section>
+    <section id="fourth-and-last-child"></section>
+  </section>
+</main>
+<script>
+//Acesse o elemento where-are-you.
+const elementWAY = document.getElementById('where-are-you');
+
+//Acesse parent a partir de where-are-you e adicione uma color a ele.
+const parentWAY = elementWAY.parentElement;
+parentWAY.style.color = 'red';
+
+//Acesse o first-child-of-child e adicione um texto a ele. Você se lembra dos vídeos da aula anterior? Eles ensinam como fazer isso.
+const firstChOc = elementWAY.firstElementChild;
+firstChOc.innerText = `adicionando texto`;
+
+//Acesse o first-child a partir de parent.
+const parentFirstChild = document.getElementById('parent');
+const firstChild = parentFirstChild.firstElementChild;
+
+//Acesse o first-child a partir de where-are-you.
+const firstChildWaY = elementWay.previousElementSibling;
+
+//Acesse o texto Attention! a partir de where-are-you.
+const attetion = elementWay.firstElementChild.innerText
+
+//Acesse o third-child a partir de where-are-you.
+const thirdChild = elementWAY.nextElementSibling
+
+//Acesse o third-child a partir de parent.
+const thirdChildP = parentFirstChild.lastElementChild.previousElementSibling
+</script>
