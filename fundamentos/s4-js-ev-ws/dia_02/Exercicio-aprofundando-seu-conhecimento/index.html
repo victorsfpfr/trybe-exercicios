@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      //01-Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
+      const novoElemento = document.createElement('h1');
+      novoElemento.innerText = 'TrybeTrip - Agência de Viagens';
+      const body = document.getElementsByTagName('body')[0];
+      body.appendChild(novoElemento);
+      
+      //02-Adicione a tag main com a classe main-content como filho da tag body;
+      const classMain = document.createElement('main');
+      classMain.className = 'main-content';
+      body.appendChild(classMain);
+              
+      //03-Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      const novoSection = document.createElement('section');
+      novoSection.className = 'center-content';
+      classMain.appendChild(novoSection); 
+                         
+      //04Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      const novaTagP = document.createElement('p');
+      novaTagP.innerText = 'Algum texto blbalba, Some text blablabla(in english)';
+      novoSection.appendChild(novaTagP);
+        
+      //05-Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let novaSectionMainLeft = document.createElement('section');
+      novaSectionMainLeft.className = 'left-content';
+      classMain.appendChild(novaSectionMainLeft);
+      
+      //06-Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      let novaSectionMainRight = document.createElement('section');
+      novaSectionMainRight.className = 'right-content';
+      classMain.appendChild(novaSectionMainRight);
+            
+      //07-Adicione uma imagem com src configurado para valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      const imgSmall = document.createElement('img');
+      imgSmall.src = 'https://picsum.photos/200';
+      imgSmall.className = 'small-image';
+      novaSectionMainLeft.appendChild(imgSmall);      
+      
+      //08-Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, e assim por diante. Essa lista deve ser filha do section criado no passo 6;
+      let listaUl = document.createElement('ul');
+      listaUl.className = 'lista-numeros';
+      novaSectionMainRight.appendChild(listaUl);
+      
+      let numerosExternos = [
+        'um',
+        'dois',
+        'três',
+        'quatro',
+        'cinco',
+        'seis',
+        'sete',
+        'oito',
+        'nove',
+        'dez',
+      ];
+            
+      let numerosLista = document.querySelector('.lista-numeros');
+
+      for(let index = 0; index < numerosExternos.length; index += 1) {
+        let numeros = numerosExternos[index];
+         
+       let numeroListaItem = document.createElement('li');
+       numeroListaItem.innerText = numeros;
+    
+       numerosLista.appendChild(numeroListaItem)
+    }
+      
+      
+      
+      
+      
+      
+      
+      //09-Adicione 3 tags h3, todas filhas do main criado no passo 2.
+    
+    </script>
+  </body>
+</html>
